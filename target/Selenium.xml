@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="37.337" tests="3" skipped="0" failures="0" errors="0">
+<testcase classname="Login Page functionality Test Cases" name="[passing data using parametrization]To verify functionality of login page when correct email and correct password is entered - Example #1.1" time="12.625">
+<system-out><![CDATA[
+Given Open the browser......................................................passed
+And Enter the application url...............................................passed
+When Click on My Account Icon...............................................passed
+And Click on Login Link.....................................................passed
+When enter the correct "ben.fletcher@janbask.com" and correct "test@1234"...passed
+And Click on Login button...................................................passed
+Then Validate Login Status..................................................passed
+And Close the Browser.......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Page functionality Test Cases" name="[passing data using parametrization]To verify functionality of login page when correct email and correct password is entered - Example #1.2" time="12.207">
+<system-out><![CDATA[
+Given Open the browser......................................................passed
+And Enter the application url...............................................passed
+When Click on My Account Icon...............................................passed
+And Click on Login Link.....................................................passed
+When enter the correct "zubair.ansari@janbask.com" and correct "test@1234"..passed
+And Click on Login button...................................................passed
+Then Validate Login Status..................................................passed
+And Close the Browser.......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Page functionality Test Cases" name="[passing data using parametrization]To verify functionality of login page when correct email and correct password is entered - Example #1.3" time="12.336">
+<system-out><![CDATA[
+Given Open the browser......................................................passed
+And Enter the application url...............................................passed
+When Click on My Account Icon...............................................passed
+And Click on Login Link.....................................................passed
+When enter the correct "forest.grump@janbask.com" and correct "test@1234"...passed
+And Click on Login button...................................................passed
+Then Validate Login Status..................................................passed
+And Close the Browser.......................................................passed
+]]></system-out>
+</testcase>
+</testsuite>

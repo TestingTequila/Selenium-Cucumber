@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import io.cucumber.datatable.DataTable;
 
 public class Login
 {
@@ -55,5 +56,46 @@ public class Login
     public void close_the_browser() {
 
        driver.close();
+    }
+
+    @When("Enter correct email as {string}")
+    public void enter_correct_email_as(String emailId) {
+        WebElement emailTextBox = driver.findElement(By.xpath("//input[@id='input-email']"));
+        emailTextBox.sendKeys(emailId);
+    }
+    @When("Enter correct password as {string}")
+    public void enter_correct_password_as(String password) {
+        WebElement passwordTextBox = driver.findElement(By.xpath("//input[@id='input-password']"));
+        passwordTextBox.sendKeys(password);
+    }
+
+    @When("enter below details")
+    public void enter_below_details(DataTable dataTable) {
+        WebElement emailTextBox = driver.findElement(By.xpath("//input[@id='input-email']"));
+        emailTextBox.sendKeys(dataTable.cell(0,0));
+
+        WebElement passwordTextBox = driver.findElement(By.xpath("//input[@id='input-password']"));
+        passwordTextBox.sendKeys(dataTable.cell(0,1));
+
+        System.out.println("Name of Person is: " + dataTable.cell(0,2));
+        System.out.println("Name of Person is: " + dataTable.cell(0,3));
+    }
+
+    @When("^enter correct \"(.+)\" and correct \"(.+)\"$")
+    public void enter_correct_email_and_correct_password(String emailId, String password) {
+        WebElement emailTextBox = driver.findElement(By.xpath("//input[@id='input-email']"));
+        emailTextBox.sendKeys(emailId);
+
+        WebElement passwordTextBox = driver.findElement(By.xpath("//input[@id='input-password']"));
+        passwordTextBox.sendKeys(password);
+    }
+
+    @When("enter the correct {string} and correct {string}")
+    public void enter_the_correct_and_correct(String username, String password) {
+        WebElement emailTextBox = driver.findElement(By.xpath("//input[@id='input-email']"));
+        emailTextBox.sendKeys(username);
+
+        WebElement passwordTextBox = driver.findElement(By.xpath("//input[@id='input-password']"));
+        passwordTextBox.sendKeys(password);
     }
 }
